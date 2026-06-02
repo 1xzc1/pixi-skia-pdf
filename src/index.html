@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixi.js + Skia PDF Renderer</title>
+  <!-- Подключение внешнего файла стилей -->
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🎨 Pixi.js + Skia PDF Renderer</h1>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-primary" onclick="window.addRandomShape()">✨ Добавить фигуру</button>
+    <button class="btn btn-warning" onclick="window.switchScene()">🔄 Сменить сцену</button>
+    <button class="btn btn-danger" onclick="window.clearScene()">🗑️ Очистить сцену</button>
+    <button class="btn btn-success" onclick="window.toggleAutoSwitch()">⏱️ Автосмена</button>
+    <button class="btn btn-primary" onclick="window.exportToPDF()">📄 Экспорт PDF</button>
+  </div>
+
+  <div class="canvas-container">
+    <div class="canvas-wrapper">
+      <h3>Pixi.js Canvas</h3>
+      <div id="pixi-container"></div>
+    </div>
+    <div class="canvas-wrapper">
+      <h3>Skia Canvas</h3>
+      <canvas id="skia-canvas" width="800" height="600"></canvas>
+    </div>
+  </div>
+
+  <div class="info-panel">
+    <div class="status" id="status">Статус: Загрузка...</div>
+    <div id="control" style="display: flex; gap: 10px; z-index: 1000;"></div>
+      <div class="events-log">
+      <h4>📋 Журнал событий:</h4>
+      <div id="events-content"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
